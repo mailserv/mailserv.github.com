@@ -3,10 +3,62 @@
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <title>mailserv &mdash; the OpenBSD mailserver</title>
-  
+  <link href="/stylesheets/_reset-fonts-grids.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/stylesheets/default.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
-<body id="index" onload="">
-  <h1>mailserv &mdash; the OpenBSD mailserver</h1>
-  <img src="/images/mailserver-logo.png" />
+
+<body id="index" class='yui-skin-sam page_home'>
+  <div id='doc'>
+     <div id='hd'>
+      <h1 id="header">mailserv &mdash; the OpenBSD mailserver</h1>
+    </div>
+    
+    <div id="bd">
+      <h2>About</h2>
+      <p>The mailserv mailserver aims to be a solid, stable mail server for small to medium business and organisations.
+        It's a combination of a solid stable base operating system, OpenBSD, with best of breed open source components
+        to make up the complete mail server.</p>
+      <p>Some of the features include:</p>
+      <ul>
+        <li>Based on OpenBSD &mdash; the most secure operating system in the world.</li>
+        <li>Has a easy to use web interface to configure users, domains and basic configuration.</li>
+        <li>Easy to get started and flexible yet customize.</li>
+        <li>Best of breed open source components such as: Postfix, Dovecot, Roundcube webmail, SpamAssassin and ClamAV.</li>
+      </ul>
+
+      <h2>How to install</h2>
+      <p>Please install a base <a href="www.openbsd.org">OpenBSD</a> system, with at least these packages: </p>
+      <ul>
+        <li>baseXX</li>
+        <li>etcXX</li>
+        <li>compXX</li>
+        <li>xbaseXX</li>
+      </ul>
+      <p>The installer assumes that the system is clean, that you don't have any other packages already installed.</p>
+      <p>When the system has installed and you've rebooted, and logged in as root on the cli. Please run the following:</p>
+      <pre><code>ftp -o http://github.com/mailserv/mailserv/raw/master/install/install.sh | /bin/sh</code></pre>
+      <p>The installer should be pretty self explanatory. Basically, it will:</p>
+      <ul>
+        <li>Install required packages from the OpenBSD pre-compiled packages.</li>
+        <li>Download a minimal ports tree to do some custom packages.</li>
+        <li>Compile the custom packages, primarily postfix that requires both mysql and sasl2 flavors.</li>
+        <li>Download the mailserv source from github.</li>
+        <li>Run the installer to install custom files.</li>
+      </ul>
+      
+      <h2>Support and Documentation</h2>
+      <p>Support and documentation is available through these resources:</p>
+      <ul>
+        <li>The Mailserv documentation wiki: <a href="http://github.com/mailserv/mailserv/wiki">http://github.com/mailserv/mailserv/wiki</a></li>
+        <li>The Google group: <a href="http://groups.google.com/group/mailserv/">http://groups.google.com/group/mailserv/</a></li>
+        <li>You can also send an email the Google group at <a href="mailto:mailserv@googlegroups.com">mailserv@googlegroups.com</a>.</li>
+      </ul>
+      
+      <h2>Collaboration</h2>
+      <p>Feel free to fork the project if you want to make something that takes it off the core path (such as porting
+        it to another platform), or checkout the code, and create a pull request. Reasonable and well formatted requests
+        will be included in the base code.</p>
+    </div>
+  </div>
 </body>
 <html>
