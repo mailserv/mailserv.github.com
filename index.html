@@ -36,7 +36,11 @@
       </ul>
       <p>The installer assumes that the system is clean, that you don't have any other packages already installed.</p>
       <p>When the system has installed and you've rebooted, and logged in as root on the cli. Please run the following:</p>
-      <pre><code>ftp -o http://github.com/mailserv/mailserv/raw/master/install/install.sh | /bin/sh</code></pre>
+      <pre><code>export PKG_PATH=http://ftp.OpenBSD.org/pub/OpenBSD/`uname -r`/packages/`uname -m`/
+pkg_add git
+cd /var
+git clone git@github.com:mailserv/mailserv.git
+/var/mailserv/install/install.sh</code></pre>
       <p>The installer should be pretty self explanatory. Basically, it will:</p>
       <ul>
         <li>Install required packages from the OpenBSD pre-compiled packages.</li>

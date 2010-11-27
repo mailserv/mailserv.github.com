@@ -52,6 +52,7 @@ h1, h2, h3, h4 {
   padding: 2em;
   border: 2px solid #9ed3e3;
   margin: 10px auto;
+  width: 780px;
 }
 
 #bd {
@@ -70,5 +71,11 @@ pre {
   border: 1px solid #ccc;
   padding: 0.5em;
   margin: 1em;
+}
+
+code {
+  font-family: "Panic Sans", "Courier New", Courier, fixed-width;
+  line-height: 160%;
+  font-size: 100%;
 }
 
