@@ -41,7 +41,7 @@ cd /var
 git clone git://github.com/mailserv/mailserv.git
 
 /usr/sbin/pkg_add -v -u -F update -F updatedepends 2>&1 | tee -a /var/log/upgrade.log
-pkg_add -v -m -i postfix--mysql 2>&1 | tee -a /var/log/upgrade.log
+pkg_add -v -m postfix-2.7.1-mysql 2>&1 | tee -a /var/log/upgrade.log
 /var/mailserv/install/scripts/10_pkg_add.sh install 2>&1 | tee -a /var/log/upgrade.log
 /var/mailserv/install/scripts/20_install_etc.sh install 2>&1 | tee -a /var/log/upgrade.log
 /var/mailserv/install/scripts/25_add_clamdb.sh install 2>&1 | tee -a /var/log/upgrade.log
