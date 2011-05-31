@@ -79,10 +79,12 @@ code {
   font-size: 100%;
 }
 
-table tr {
+table th {
   border-bottom: 1px solid #9ed3e3;
 }
 
 table td {
   border-bottom: 1px solid #ccc;
+  padding: 5px;
+  font-size: small;
 }
